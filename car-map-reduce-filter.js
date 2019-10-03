@@ -16,6 +16,12 @@ let cars = [{
 } ];
 
 let hotcar = cars.filter((car) => {
-    return car.year < 2017
-});
-console.log( hotcar )
+    return car.year < 2018
+})
+
+let displayData = cars.map((car) => {
+    let result = car
+    result.display = car.make + '' + car.model +'' + car.year 
+    return result
+})
+console.log( displayData )
